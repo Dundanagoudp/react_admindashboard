@@ -23,7 +23,7 @@ return (
 
       <div className="content">
       <Dashboard/>
-      <Outlet/>
+      {/* <Outlet/> */}
 
       </div>
 

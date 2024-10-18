@@ -18,6 +18,7 @@ import Logout from '@mui/icons-material/Logout';
 import { IoShieldHalf } from "react-icons/io5";
 
 export const Header = () => {
+  const [isOpen, setIsOpen] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorElNotifications, setAnchorElNotifications] = useState(null); // For notifications dropdown
 
@@ -53,9 +54,9 @@ export const Header = () => {
               </Link>
             </div>
             <div className="col-3 d-flex align-items-center part2 pl-4">
-              <Button className="rounded-circle" style={{ marginRight: '15px' }}>
-                <MdMenuOpen />
-              </Button>
+            <Button className="rounded-circle" onClick={() => setIsOpen(!isOpen)} style={{ marginRight: "15px" }}>
+          <MdMenuOpen />
+        </Button>
               <SearchBox />
             </div>
             <div className="col-7 d-flex align-items-center justify-content-end part3">

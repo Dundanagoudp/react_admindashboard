@@ -1,0 +1,80 @@
+.sidebar {
+      width: 320px;
+      height: 100vh;
+      background-color: white;
+      color: #1c2b78;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    }
+    
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sidebar-title {
+      color: black;
+      font-weight: 600;
+    }
+    
+    .menu-icon {
+      color: #1c2b78;
+    }
+    
+    .sidebar-menu {
+      padding: 20px;
+    }
+    
+    .menu-item {
+      margin-bottom: 10px;
+      color: #1c2b78;
+    }
+    
+    .sidebar {
+      width: 320px;
+      height: 100vh;
+      background-color: white;
+      color: #1c2b78;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    
+    .sidebar-title {
+      color: black;
+    }
+    
+    .sidebar-menu {
+      padding: 20px;
+      flex-grow: 1;
+    }
+    
+    .menu-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+      color: black;
+      transition: background-color 0.3s;
+      font-weight: 500;
+    }
+    
+    .menu-item:hover {
+      background-color: #f0f0f0;
+      border-radius: 4px;
+    }
+    
+    .menu-item .MuiIconButton-root {
+      margin-right: 10px;
+      color: black;
+    }
+    

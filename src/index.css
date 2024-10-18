@@ -27,8 +27,8 @@ header .logo img {
 
 header .logo span {
     color: #292929;
-    font-weight: 800;
-    font-size: 24px;
+    font-weight: 900;
+    font-size: 23px;
 }
 
 header button.rounded-circle {
@@ -78,7 +78,7 @@ header button.rounded-circle:hover svg{
     text-transform: capitalize;
 }
 
-.myAcc .userImg{
+  .myAcc .userImg{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,4 +121,96 @@ header button.rounded-circle:hover svg{
     font-size: 12px;
     color: black;
     opacity: 0.7;
+}
+
+#account-menu li{
+    font-size: 15px !important;
+    padding: 12px 15px !important;
+}
+#account-menu li svg{
+    font-size: 20px !important;
+}
+
+/* Styling for Notifications heading */
+#notifications-menu .head h4 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;     padding-bottom: 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;   }
+  /* Notifications Menu */
+#notifications.MuiPaper-elevation {
+    right: 250px !important; /* Position from the right */
+    width: 300px !important; /* Set dropdown width */
+    left: auto !important; /* Ensure the left value is set to auto */
+  }
+
+  /* Dropdown List Header Styling */
+.dropdown_list .head h4 {
+    font-size: 17px;
+    font-weight: 600;
+  }
+  
+  /* List Items in Dropdown */
+  .dropdown_list li.MuiButtonBase-root {
+    background: #ebf6ff !important;
+    color: #000 !important;
+    padding: 10px 15px !important;
+  }
+  
+  
+  /* Dropdown List Title Styling */
+  /* Dropdown List Title Styling */
+.dropdown_list h4 {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  
+  /* Notification Info Container */
+  .dropdownInfo {
+    padding-left: 15px;
+  }
+  
+  /* Notification Info Text Styling */
+  .dropdownInfo h4 {
+    font-size: 13px;
+    font-weight: 500;
+    white-space: break-spaces;
+    line-height: 21px;
+    margin-top: 0px;
+  }
+  
+  /* Bold Text inside Notification */
+  .dropdownInfo h4 b {
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  
+  /* Paragraph Text in Notification */
+  .dropdownInfo p {
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 0px;
+  }
+  
+  /* Sky Blue Text Class */
+  .text-sky {
+    color: #0858f7 !important; /* Ensure important is correctly used here */
+  }
+  
+  .btn-blue {
+    background-color: #1C2B78;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s;
+    width: 100% !important;
+}
+
+.btn-blue:hover {
+    background-color: #163b69;
 }

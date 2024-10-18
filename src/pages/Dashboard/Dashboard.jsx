@@ -1,7 +1,7 @@
 export const Dashboard=()=>{
       return (
             <>
-            {/* <h1>Dashbord hello</h1> */}
+            <h1>Dashbord hello</h1>
             </>
       );
 };

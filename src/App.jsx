@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { Dashboard } from "./pages/Dashboard/Dashboard";
 import AppLayout from "./components/AppLayout";
 import { SideBar } from "./components/SideBar";
+import { Users } from "./components/Users";
 
 export const App=()=>{
 
@@ -22,6 +23,10 @@ export const App=()=>{
 {
   path:"/sidebar",
   element:<SideBar/>
+},
+{
+  path:"/users",
+  element:<Users/>
 },
   ]
 }      

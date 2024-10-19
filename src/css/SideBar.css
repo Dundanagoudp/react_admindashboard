@@ -2,7 +2,7 @@
   width: 320px;
   height: 100vh;
   background-color: white;
-  color: #1c2b78;
+  color: #030303;
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
@@ -28,19 +28,17 @@
   flex-grow: 1;
   overflow-y: auto;
   overflow-x: hidden;
-  position: relative;
 }
 
 .menu-item {
-  display: flex;
   align-items: center;
   margin-bottom: 10px;
   color: rgba(0, 0, 0, 0.7);
-  transition: background-color 0.3s;
   font-weight: 600;
   font-size: 1.2rem;
+  transition: background-color 0.3s;
   border-radius: 8px;
-  padding: 10px;
+  padding: 5px; /* Reduced padding */
   cursor: pointer;
 }
 
@@ -48,24 +46,52 @@
   background-color: #f0f0f0;
 }
 
-.menu-item .MuiIconButton-root {
+.sidebar-button {
+  display: flex;
+  align-items: center;
+  padding: 8px; /* Reduced padding */
+  width: 100%;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.icon {
   margin-right: 10px;
   color: black;
   font-size: 1.4rem;
 }
 
-@media (max-width: 768px) {
-  .sidebar-title {
-    font-size: 1.4rem;
-  }
+.arrow {
+  margin-left: auto;
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+}
 
-  .menu-item {
-    font-size: 1rem;
-  }
+.submenu {
+  padding: 0;
+  margin: 5px 0 0 20px;
+  display: block;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-  .menu-item .MuiIconButton-root {
-    font-size: 1.2rem;
-  }
+.submenu li {
+  list-style: none;
+}
+
+.submenu-item {
+  padding: 8px 15px;
+  color: black;
+  display: block;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.submenu-item:hover {
+  background-color: #e0e0e0;
+  color: #333;
 }
 
 .sidebar-menu::-webkit-scrollbar {
@@ -89,22 +115,49 @@
   background-color: transparent;
 }
 
-.menu-item-link {
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Use inherited color */
+.MuiButton-root {
+  color: black !important;
+  background-color: transparent !important;
+  border: none;
 }
 
-.menu-item {
-  display: flex; /* Flexbox for alignment */
-  align-items: center; /* Center items vertically */
-  padding: 10px; /* Padding for clickable area */
-}
-.sidebar.collapsed {
-  width: 80px; /* Width when collapsed */
+.MuiButton-root:hover {
+  background-color: transparent !important;
 }
 
-.sidebar-menu {
-  overflow-y: auto; /* Enable vertical scrolling if necessary */
-  height: calc(100vh - 64px); /* Adjust height based on your header */
+.MuiButton-text {
+  font-weight: 700;
 }
 
+.menu-text {
+  font-weight: bold;
+  color: #555;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .sidebar-title {
+    font-size: 1.4rem;
+  }
+
+  .menu-item {
+    font-size: 1rem;
+  }
+
+  .icon {
+    font-size: 1.2rem;
+  }
+}
+
+.submenu {
+  list-style-type: none;
+  padding-left: 20px;
+}
+
+.submenu-item a {
+  color: rgb(65, 63, 63) !important;
+  font-weight: 700;
+  text-decoration: none;
+  display: block;
+  padding: 8px 0;
+}

@@ -66,7 +66,24 @@
   margin-left: auto;
   color: rgba(0, 0, 0, 0.5);
   font-size: 1.2rem;
+  transition: all 0.3s ease-in-out ;
 }
+
+.arrow {
+  transition: transform 0.3s ease; /* Smooth transition for the rotation */
+}
+
+.rotate {
+  transform: rotate(90deg); /* Rotate the arrow 90 degrees when submenu is open */
+}
+
+.sidebar-button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
 
 .submenu {
   padding: 0;
@@ -215,3 +232,51 @@
   font-size: 18px !important; /* Corrected "limportant" to "important" */
 }
 
+.logout{
+  background-color: #0858f7;
+  border-radius: 10px;
+}
+.logout-button {
+  background-color: #3f51b5;
+  color: white;
+  
+}
+
+.logout-icon {
+  color: white;
+}
+
+.logout-button:hover {
+  background-color: #303f9f;
+}
+
+.logout .logout-button {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important; /* Ensure the text is white */
+  background-color: #0858f7; /* Match button background color to box */
+}
+
+.rotate {
+  transform: rotate(90deg);
+  transition: transform 0.3s ease;
+}
+
+.menu-item.active {
+  background-color: white;
+}
+
+.submenu {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.submenu-item {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.submenu-item a {
+  text-decoration: none;
+  color: #333;
+}

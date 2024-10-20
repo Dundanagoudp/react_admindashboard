@@ -1,4 +1,4 @@
-import React, { useState } from "react"; // Import useState
+import React, { useState } from "react";
 import { Button } from "@mui/material";
 import { MdDashboard, MdMessage } from "react-icons/md"; 
 import { FaAngleRight, FaProductHunt } from "react-icons/fa"; 
@@ -11,17 +11,17 @@ import { MdOutlineLogout } from "react-icons/md";
 import '../css/SideBar.css';  
 
 export const SideBar = () => {
-  const [isProductsOpen, setIsProductsOpen] = useState(false); // State to manage Products submenu visibility
-  const [isUsersOpen, setIsUsersOpen] = useState(false); // State to manage Users submenu visibility
+  const [isProductsOpen, setIsProductsOpen] = useState(false); 
+  const [isUsersOpen, setIsUsersOpen] = useState(false); 
 
   const toggleProductsMenu = () => {
-    setIsProductsOpen(!isProductsOpen); // Toggle the Products submenu
-    setIsUsersOpen(false); // Close the Users submenu when Products submenu is opened
+    setIsProductsOpen(!isProductsOpen); 
+    setIsUsersOpen(false); 
   };
 
   const toggleUsersMenu = () => {
-    setIsUsersOpen(!isUsersOpen); // Toggle the Users submenu
-    setIsProductsOpen(false); // Close the Products submenu when Users submenu is opened
+    setIsUsersOpen(!isUsersOpen); 
+    setIsProductsOpen(false); 
   };
 
   return (
@@ -39,13 +39,13 @@ export const SideBar = () => {
         </li>
         
         {/* Products Menu */}
-        <li className="menu-item">
+        <li className={`menu-item ${isProductsOpen ? 'active' : ''}`}> {/* Added conditional class */}
           <Button className="w-100 sidebar-button" onClick={toggleProductsMenu}>
             <span className="icon"><FaProductHunt /></span> 
             <span className="menu-text">Products</span>
-            <span className="arrow"><FaAngleRight /></span> 
+            <span className={`arrow ${isProductsOpen ? 'rotate' : ''}`}><FaAngleRight /></span> 
           </Button>
-          {isProductsOpen && ( // Render submenu conditionally
+          {isProductsOpen && (
             <ul className="submenu"> 
               <li className="submenu-item"><Link to="#">Products List</Link></li>
               <li className="submenu-item"><Link to="#">Product View</Link></li>
@@ -55,13 +55,13 @@ export const SideBar = () => {
         </li>
 
         {/* Users Menu */}
-        <li className="menu-item">
+        <li className={`menu-item ${isUsersOpen ? 'active' : ''}`}> {/* Added conditional class */}
           <Button className="w-100 sidebar-button" onClick={toggleUsersMenu}>
             <span className="icon"><MdDashboard /></span> 
             <span className="menu-text">Users</span>
-            <span className="arrow"><FaAngleRight /></span> 
+            <span className={`arrow ${isUsersOpen ? 'rotate' : ''}`}><FaAngleRight /></span> 
           </Button>
-          {isUsersOpen && ( // Render submenu conditionally
+          {isUsersOpen && (
             <ul className="submenu"> 
               <li className="submenu-item"><Link to="#">Users List</Link></li>
               <li className="submenu-item"><Link to="#">User View</Link></li>
@@ -98,34 +98,19 @@ export const SideBar = () => {
             <span className="arrow"><FaAngleRight /></span> 
           </Button>
         </li>
-        <li className="menu-item">
-          <Button className="w-100 sidebar-button">
-            <span className="icon"><IoIosNotifications /></span> 
-            <span className="menu-text">Notifications</span>
-            <span className="arrow"><FaAngleRight /></span> 
-          </Button>
-        </li>
-        <li className="menu-item">
-          <Button className="w-100 sidebar-button">
-            <span className="icon"><IoSettingsSharp /></span> 
-            <span className="menu-text">Settings</span>
-            <span className="arrow"><FaAngleRight /></span> 
-          </Button>
-        </li>
         <br/>
-<div className='logoutWrapper'>
-  <div className='logoutBox'>
+        <div className="logoutWrapper">
+  <div className="logoutBox">
     <div className="logout">
-    <Button variant="contained" > <MdOutlineLogout/>
-      Logout
-    </Button>
+      <Button variant="contained" className="logout-button">
+        <MdOutlineLogout className="logout-icon" />
+        Logout
+      </Button>
     </div>
   </div>
 </div>
+
       </ul>
-
-
-
     </div>
   );
-};
+}; 

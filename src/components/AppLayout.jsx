@@ -1,6 +1,6 @@
 import { Outlet, useNavigation } from "react-router";
 import { Header } from "./Header";
-import { Dashboard } from "../pages/Dashboard/Dashboard";
+import { Dashboard } from "./Dashboard";
 import { SideBar } from "./SideBar";
 import { Users } from "./Users";
 
@@ -23,7 +23,7 @@ return (
       </div>
 
       <div className="content">
-      {/* <Dashboard /> */}
+      <Dashboard />
       {/* <Outlet/> */}
 
       </div>

@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Dashboard } from "./pages/Dashboard/Dashboard";
+import { Dashboard } from "./components/Dashboard";
 import AppLayout from "./components/AppLayout";
 import { SideBar } from "./components/SideBar";
 import { Users } from "./components/Users";

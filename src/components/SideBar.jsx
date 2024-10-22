@@ -93,6 +93,20 @@ export const SideBar = () => {
         </li>
         <li className="menu-item">
           <Button className="w-100 sidebar-button">
+            <span className="icon"><MdMessage /></span> 
+            <span className="menu-text">Messages</span>
+            <span className="arrow"><FaAngleRight /></span> 
+          </Button>
+        </li>
+        <li className="menu-item">
+          <Button className="w-100 sidebar-button">
+            <span className="icon"><IoIosNotifications /></span> 
+            <span className="menu-text">Notifications</span>
+            <span className="arrow"><FaAngleRight /></span> 
+          </Button>
+        </li>3
+        <li className="menu-item">
+          <Button className="w-100 sidebar-button">
             <span className="icon"><IoSettingsSharp /></span> 
             <span className="menu-text">Settings</span>
             <span className="arrow"><FaAngleRight /></span> 

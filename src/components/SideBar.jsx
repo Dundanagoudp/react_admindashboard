@@ -104,7 +104,7 @@ export const SideBar = () => {
             <span className="menu-text">Notifications</span>
             <span className="arrow"><FaAngleRight /></span> 
           </Button>
-        </li>3
+        </li>
         <li className="menu-item">
           <Button className="w-100 sidebar-button">
             <span className="icon"><IoSettingsSharp /></span> 

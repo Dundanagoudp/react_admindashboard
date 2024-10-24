@@ -25,7 +25,7 @@ export const Dashboard = () => {
 
           </div>
           <div className="dashboardBoxWrapperRow">
-            <div className="box">Right Box</div> 
+            <div className="box graph">Total sales </div> 
           </div>
         </div>
       </div>

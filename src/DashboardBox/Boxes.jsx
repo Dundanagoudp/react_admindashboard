@@ -5,9 +5,11 @@ import { TbStars } from "react-icons/tb"; // Import additional icons
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import { useState } from "react";
+import { IoTimerOutline } from "react-icons/io5";
+
 
 const ITEM_HEIGHT = 48; 
-const options = ['Option 1', 'Option 2', 'Option 3'];
+const options = ['Last Day', 'Last Week', 'Last Month','Last Year'];
 
 export const DashboardBox = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
@@ -72,8 +74,9 @@ export const DashboardBox = (props) => {
           }}
         >
           {options.map((option) => (
-            <MenuItem key={option} onClick={handleClose}>
-              {option}
+            <MenuItem key={option} onClick={handleClose} className="menu">
+            <IoTimerOutline />
+            {option}
             </MenuItem>
           ))}
         </Menu>

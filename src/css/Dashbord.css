@@ -30,13 +30,13 @@
   height: 200px;
 }
 
-.box {
+.boxgraph {
   background-color: #cdcdcd;
-  padding: 180px;
   border-radius: 12px;
   text-align: center;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   height: 410px;
+  width:410px !important;
   color: #fff;
   font-size: 1.4rem;
   font-weight: 600;
@@ -163,7 +163,23 @@
   top: 12px !important;
 }
 
-.dashboardBoxWrapperRow .box {
+.dashboardBoxWrapperRow .boxgraph {
   background-image: linear-gradient(#1a50b5, #2a6ff7);
   border-radius: 10px;
 }
+.graph{
+  margin-left: auto;
+}
+
+/* right box menu */
+
+.menu2{
+  margin-right: 30px;
+}
+
+.toggleIcon svg {
+  color: #fff !important;
+  font-size: 20px !important;
+  opacity: 1 !important;
+}
+

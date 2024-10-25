@@ -1,11 +1,11 @@
 import { BiDotsVerticalRounded } from "react-icons/bi";
 import { Button } from "@mui/material";
-import { HiTrendingUp } from "react-icons/hi"; // You can use any icons here
-import { TbStars } from "react-icons/tb"; // Import additional icons
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import { useState } from "react";
-import { IoTimerOutline } from "react-icons/io5";
+// import { HiTrendingUp } from "react-icons/hi"; // You can use any icons here
+// import { TbStars } from "react-icons/tb"; // Import additional icons
+  import Menu from '@mui/material/Menu';
+  import MenuItem from '@mui/material/MenuItem';
+  import { useState } from "react";
+  import { IoTimerOutline } from "react-icons/io5";
 
 
 const ITEM_HEIGHT = 48; 
@@ -54,7 +54,7 @@ export const DashboardBox = (props) => {
       </div>
 
       <div className="d-flex align-items-center w-100 bottomEle">
-        <h6 className="text-white1 mb-0 mt-0">Last Month</h6>
+        <h6 className="text-white1 mb-0 mt-0">Total Sales</h6>
         <Button className="ml-auto toggleIcon" onClick={handleClick}>
           <BiDotsVerticalRounded />
         </Button>

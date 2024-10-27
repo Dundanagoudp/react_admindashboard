@@ -112,7 +112,7 @@ export const Dashboard = (props) => {
       </div>
       <div className="card shadow border-0 p-2 ">
   <h3 className="hd">Best Selling Products</h3>
-  <div className="row cardFilters">
+  <div className="row cardFilters mt-3">
     <div className="col">
       <h4>SHOW BY</h4>
     </div>

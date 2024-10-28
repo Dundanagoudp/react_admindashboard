@@ -12,8 +12,11 @@ import { BiDotsVerticalRounded } from "react-icons/bi";
 import { Chart } from "react-google-charts";
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import { MdStarRate } from "react-icons/md";
+import { FaEye } from "react-icons/fa";
+import { IoPencilSharp } from "react-icons/io5";
+import { MdDelete } from "react-icons/md";
 
-// Chart data and options for graph
 export const chartData = [
   ["Year", "Sales", "Expenses"],
   ["2013", 1000, 400],
@@ -27,24 +30,17 @@ export const chartOptions = {
   hAxis: { title: "Year", titleTextStyle: { color: "#333" } },
   vAxis: { minValue: 0 },
   chartArea: { width: "50%", height: "70%" },
-  backgroundColor: 'transparent',  // Transparent background for the chart
+  backgroundColor: 'transparent',
 };
 
-// Options for the menu dropdown
-const menuOptions = [
-  'Last 24 Hours',
-  'Last 7 Days',
-  'Last 30 Days',
-  'All Time',
-];
-
+const menuOptions = ['Last 24 Hours', 'Last 7 Days', 'Last 30 Days', 'All Time'];
 const ITEM_HEIGHT = 48;
 
-export const Dashboard = (props) => {
+export const Dashboard = () => {
   const [anchorEl, setAnchorEl] = useState(null);
   const [showBy, setShowBy] = useState('');
   const [categoryBy, setCategoryBy] = useState('');
-  const [brandBy, setBrandBy] = useState('');  // Corrected here
+  const [brandBy, setBrandBy] = useState('');
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -68,8 +64,8 @@ export const Dashboard = (props) => {
   };
 
   return (
-    <div className="content">
-      <div className="main-content w-100">
+    <div className="dashboard-scroll-container">
+      <div className="main-content">
         <div className="right-content">
           <div className="dashboardBoxWrapper">
             <DashboardBox color={["#1da256", "#48d483"]} icon={<FaUserCircle />} grow={true} grow1={false} icon1={<FaArrowTrendUp />} />
@@ -123,108 +119,142 @@ export const Dashboard = (props) => {
             </div>
           </div> 
         </div>
-      </div>
-      
-      <div className="card shadow border-0 p-2">
-        <h3 className="hd">Best Selling Products</h3>
-        <div className="row cardFilters mt-3">
-          <div className="col">
-            <h4>Show By</h4>
-            <FormControl  size="small" className="w-100">
-            <Select
-                value={showBy}
-                onChange={handleChange}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                labelId="demo-select-small-label"
-                className="w-100"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col">
-            <h4>Category By</h4>
-            <FormControl  size="small" className="w-100">
-              <Select
-                value={categoryBy}
-                onChange={handleChange2}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                className="w-100"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col">
-            <h4>Brand By</h4>
-            <FormControl  size="small" className="w-100">
-              <Select
-                value={brandBy}
-                onChange={handleChange3}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                className="w-100"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
-          <div className="col">
-            <h4>Brand By</h4>
-            <FormControl  size="small" className="w-100">
-              <Select
-                value={brandBy}
-                onChange={handleChange3}
-                displayEmpty
-                inputProps={{ 'aria-label': 'Without label' }}
-                className="w-100"
-              >
-                <MenuItem value="">
-                  <em>None</em>
-                </MenuItem>
-                <MenuItem value={10}>Ten</MenuItem>
-                <MenuItem value={20}>Twenty</MenuItem>
-                <MenuItem value={30}>Thirty</MenuItem>
-              </Select>
-            </FormControl>
+        
+        <div className="card shadow border-0 p-2">
+          <h3 className="hd">Best Selling Products</h3>
+          <div className="row cardFilters mt-3">
+            <div className="col">
+              <h4>Show By</h4>
+              <FormControl size="small" className="w-100">
+                <Select
+                  value={showBy}
+                  onChange={handleChange}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
+                  labelId="demo-select-small-label"
+                  className="w-100"
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col">
+              <h4>Category By</h4>
+              <FormControl size="small" className="w-100">
+                <Select
+                  value={categoryBy}
+                  onChange={handleChange2}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
+                  labelId="demo-select-small-label"
+                  className="w-100"
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col">
+              <h4>Brand By</h4>
+              <FormControl size="small" className="w-100">
+                <Select
+                  value={brandBy}
+                  onChange={handleChange3}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
+                  labelId="demo-select-small-label"
+                  className="w-100"
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+            <div className="col">
+              <h4>Brand By</h4>
+              <FormControl size="small" className="w-100">
+                <Select
+                  value={brandBy}
+                  onChange={handleChange3}
+                  displayEmpty
+                  inputProps={{ 'aria-label': 'Without label' }}
+                  labelId="demo-select-small-label"
+                  className="w-100"
+                >
+                  <MenuItem value="">
+                    <em>None</em>
+                  </MenuItem>
+                  <MenuItem value={10}>Ten</MenuItem>
+                  <MenuItem value={20}>Twenty</MenuItem>
+                  <MenuItem value={30}>Thirty</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
           </div>
 
+          <div className="table-responsive mt-3">
+            <table className="table table-bordered">
+              <thead className="thrad-dark">
+                <tr>
+                  <th>UID</th>
+                  <th>Product</th>
+                  <th>Category</th>
+                  <th>Brand</th>
+                  <th>Price</th>
+                  <th>Stock</th>
+                  <th>Rating</th>
+                  <th>Order</th>
+                  <th>Sales</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
         </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+</tbody>
 
-        <div className="table-responsive">
-          <table className="table table-bordered">
-            <thead>
-              <tr>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-                <th>UID</th>
-              </tr>
-            </thead>
-          </table>
+            </table>
+          </div>
         </div>
       </div>
     </div>

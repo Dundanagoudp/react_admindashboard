@@ -10,6 +10,8 @@ import { IoTimerOutline } from "react-icons/io5";
 import { Button } from "@mui/material";
 import { BiDotsVerticalRounded } from "react-icons/bi";  
 import { Chart } from "react-google-charts";
+import FormControl from '@mui/material/FormControl';
+import Select from '@mui/material/Select';
 
 // Chart data and options for graph
 export const chartData = [
@@ -40,6 +42,9 @@ const ITEM_HEIGHT = 48;
 
 export const Dashboard = (props) => {
   const [anchorEl, setAnchorEl] = useState(null);
+  const [showBy, setShowBy] = useState('');
+  const [categoryBy, setCategoryBy] = useState('');
+  const [brandBy, setBrandBy] = useState('');  // Corrected here
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -48,6 +53,18 @@ export const Dashboard = (props) => {
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  
+  const handleChange = (event) => {
+    setShowBy(event.target.value); 
+  };
+
+  const handleChange2 = (event) => {
+    setCategoryBy(event.target.value); 
+  };
+
+  const handleChange3 = (event) => {
+    setBrandBy(event.target.value); 
   };
 
   return (
@@ -104,21 +121,112 @@ export const Dashboard = (props) => {
                 options={chartOptions}
               />
             </div>
-            
           </div> 
-          
         </div>
-        
       </div>
-      <div className="card shadow border-0 p-2 ">
-  <h3 className="hd">Best Selling Products</h3>
-  <div className="row cardFilters mt-3">
-    <div className="col">
-      <h4>SHOW BY</h4>
-    </div>
-  </div>
-</div>
       
+      <div className="card shadow border-0 p-2">
+        <h3 className="hd">Best Selling Products</h3>
+        <div className="row cardFilters mt-3">
+          <div className="col">
+            <h4>Show By</h4>
+            <FormControl  size="small" className="w-100">
+            <Select
+                value={showBy}
+                onChange={handleChange}
+                displayEmpty
+                inputProps={{ 'aria-label': 'Without label' }}
+                labelId="demo-select-small-label"
+                className="w-100"
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div className="col">
+            <h4>Category By</h4>
+            <FormControl  size="small" className="w-100">
+              <Select
+                value={categoryBy}
+                onChange={handleChange2}
+                displayEmpty
+                inputProps={{ 'aria-label': 'Without label' }}
+                className="w-100"
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div className="col">
+            <h4>Brand By</h4>
+            <FormControl  size="small" className="w-100">
+              <Select
+                value={brandBy}
+                onChange={handleChange3}
+                displayEmpty
+                inputProps={{ 'aria-label': 'Without label' }}
+                className="w-100"
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+          <div className="col">
+            <h4>Brand By</h4>
+            <FormControl  size="small" className="w-100">
+              <Select
+                value={brandBy}
+                onChange={handleChange3}
+                displayEmpty
+                inputProps={{ 'aria-label': 'Without label' }}
+                className="w-100"
+              >
+                <MenuItem value="">
+                  <em>None</em>
+                </MenuItem>
+                <MenuItem value={10}>Ten</MenuItem>
+                <MenuItem value={20}>Twenty</MenuItem>
+                <MenuItem value={30}>Thirty</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+
+        </div>
+
+        <div className="table-responsive">
+          <table className="table table-bordered">
+            <thead>
+              <tr>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+                <th>UID</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+      </div>
     </div>
   );
 };

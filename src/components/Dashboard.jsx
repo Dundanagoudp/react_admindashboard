@@ -16,6 +16,8 @@ import { MdStarRate } from "react-icons/md";
 import { FaEye } from "react-icons/fa";
 import { IoPencilSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
+import Pagination from '@mui/material/Pagination';
+
 
 export const chartData = [
   ["Year", "Sales", "Expenses"],
@@ -204,8 +206,8 @@ export const Dashboard = () => {
               </FormControl>
             </div>
           </div>
-
-          <div className="table-responsive mt-3">
+          
+          <div className="table-responsive mt-3" style={{ overflowX: "auto" }}>
             <table className="table table-bordered">
               <thead className="thrad-dark">
                 <tr>
@@ -251,9 +253,190 @@ export const Dashboard = () => {
       </div>
     </td>
   </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
+  <tr>
+    <td>#1</td>
+    <td>
+      <div className="d-flex product-info">
+        <img src="/logo1.png" alt="Product" className="product-image" />
+        <div className="info">
+          <h6 className="product-name">Men's T-shirt</h6>
+          <p className="product-description">Men's top class shirt...</p>
+        </div>
+      </div>
+    </td>
+    <td>Men</td>
+    <td>NetPlay</td>
+    <td>
+      <del className="old-price">₹1000</del><br />
+      <span className="new-price">₹999</span>
+    </td>
+    <td>100</td>
+    <td><MdStarRate className="good-rating" /> 4.5</td>
+    <td>380</td>
+    <td>38k</td>
+    <td>
+    <div className="actions d-flex align-items-center">
+    <Button color="secondary"><FaEye /></Button>
+        <Button color="success"><IoPencilSharp /></Button>
+        <Button color="danger"><MdDelete /></Button>
+      </div>
+    </td>
+  </tr>
 </tbody>
 
             </table>
+
+            <div className="d-flex tableFooter">
+              <p>showing <b> 12 </b> of <b> 60 </b> resultes </p>
+            <Pagination count={10} color="primary" className="Pagination"  showFirstButton showLastButton/>
+
+            </div>
+
           </div>
         </div>
       </div>

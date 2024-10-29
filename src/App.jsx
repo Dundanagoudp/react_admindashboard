@@ -4,6 +4,7 @@ import { Dashboard } from "./components/Dashboard";
 import AppLayout from "./components/AppLayout";
 import { SideBar } from "./components/SideBar";
 import { Users } from "./components/Users";
+import { Login } from "./pages/Login";
 
 
 export const App=()=>{
@@ -15,7 +16,7 @@ export const App=()=>{
   children:[
     {
       path:"/",
-      element :<Dashboard />
+      element :<Dashboard/>
 },
 {
   path:"/dashboard",
@@ -29,7 +30,10 @@ export const App=()=>{
   path:"/users",
   element:<Users/>
 },
-
+{
+  path:"/login",
+  element:<Login/>
+}
   ]
 }      
       ])

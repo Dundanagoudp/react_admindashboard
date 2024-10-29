@@ -15,6 +15,7 @@ export const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorElNotifications, setAnchorElNotifications] = useState(null);
+  const [isLogin, setIsLogin] = useState(false);
 
   const context = useContext(myContext);
 
@@ -43,7 +44,7 @@ export const Header = () => {
         <div className="container-fluid w-100">
           <div className="row d-flex align-items-center w-100">
             <div className="col-sm-2 part1">
-              <Link to={'/'} className="d-flex align-items-center logo">
+              <Link to="/" className="d-flex align-items-center logo">
                 <img src="/logo1.png" alt="Logo" style={{ marginRight: '10px' }} />
                 <span className="ml-2">CHETAN</span>
               </Link>
@@ -104,90 +105,94 @@ export const Header = () => {
                 <div className="head pl-3 pb-2">
                   <h4>Orders (12)</h4>
                 </div>
-                <div>
-                  <MenuItem onClick={handleNotificationsClose}>
-                    <div className="myAcc d-flex align-items-center">
-                      <div className="userImg">
-                        <span className="rounded-circle">
-                          <img src="/admin.png" alt="img" />
-                        </span>
-                      </div>
-                      <div className="dropdownInfo">
-                        <h4>
-                          <span>
-                            <b>Chetan</b> added best values <b>Good dealing</b>
-                          </span>
-                        </h4>
-                        <p className="text-sky">Few minutes ago</p>
-                      </div>
-                      
+                {/* Example notification items */}
+                <MenuItem onClick={handleNotificationsClose}>
+                  <div className="myAcc d-flex align-items-center">
+                    <div className="userImg">
+                      <span className="rounded-circle">
+                        <img src="/admin.png" alt="img" />
+                      </span>
                     </div>
-                  </MenuItem>
+                    <div className="dropdownInfo">
+                      <h4>
+                        <span>
+                          <b>Chetan</b> added best values <b>Good dealing</b>
+                        </span>
+                      </h4>
+                      <p className="text-sky">Few minutes ago</p>
+                    </div>
+                  </div>
+                </MenuItem>
+                {/* Additional notifications can be added here */}
+                <button className="btn-blue w-100">View all notifications</button>
+              </Menu>
+
+              {/* Account Section */}
+              {context.isLogin ? (
+                <div className="myAccWrapper">
+                  <Button className="myAcc d-flex align-items-center" onClick={handleClick}>
+                    <div className="userImg">
+                      <span className="rounded-circle">
+                        <img src="/admin.png" alt="photo" />
+                      </span>
+                    </div>
+                    <div className="userInfo">
+                      <h4>Chetan Patil</h4>
+                      <p className="mb-0">@Chetan77</p>
+                    </div>
+                  </Button>
+                  <Menu
+                    anchorEl={anchorEl}
+                    open={open}
+                    onClose={handleClose}
+                    PaperProps={{
+                      elevation: 0,
+                      sx: {
+                        overflow: 'visible',
+                        filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
+                        mt: 1.5,
+                        '&::before': {
+                          content: '""',
+                          display: 'block',
+                          position: 'absolute',
+                          top: 0,
+                          right: 14,
+                          width: 10,
+                          height: 10,
+                          bgcolor: 'background.paper',
+                          transform: 'translateY(-50%) rotate(45deg)',
+                          zIndex: 0,
+                        },
+                      },
+                    }}
+                    transformOrigin={{ horizontal: 'right', vertical: 'top' }}
+                    anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
+                  >
+                    <MenuItem onClick={handleClose}>
+                      <ListItemIcon>
+                        <PersonAdd fontSize="small" />
+                      </ListItemIcon>
+                      My account
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <ListItemIcon>
+                        <IoShieldHalf />
+                      </ListItemIcon>
+                      Reset Password
+                    </MenuItem>
+                    <MenuItem onClick={handleClose}>
+                      <ListItemIcon>
+                        <Logout fontSize="small" />
+                      </ListItemIcon>
+                      Logout
+                    </MenuItem>
+                  </Menu>
                 </div>
-                <button className="btn-blue w-100">view all notifications</button>
-              </Menu>
-
-              {/* Account Dropdown */}
-              <div className="myAccWrapper">
-                <Button className="myAcc d-flex align-items-center" onClick={handleClick}>
-                  <div className="userImg">
-                    <span className="rounded-circle">
-                      <img src="/admin.png" alt="photo" />
-                    </span>
-                  </div>
-                  <div className="userInfo">
-                    <h4>Chetan Patil</h4>
-                    <p className="mb-0">@Chetan77</p>
-                  </div>
-                </Button>
-              </div>
-
-              <Menu
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-                PaperProps={{
-                  elevation: 0,
-                  sx: {
-                    overflow: 'visible',
-                    filter: 'drop-shadow(0px 2px 8px rgba(0,0,0,0.32))',
-                    mt: 1.5,
-                    '&::before': {
-                      content: '""',
-                      display: 'block',
-                      position: 'absolute',
-                      top: 0,
-                      right: 14,
-                      width: 10,
-                      height: 10,
-                      bgcolor: 'background.paper',
-                      transform: 'translateY(-50%) rotate(45deg)',
-                      zIndex: 0,
-                    },
-                  },
-                }}
-                transformOrigin={{ horizontal: 'right', vertical: 'top' }}
-                anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
-              >
-                <MenuItem onClick={handleClose}>
-                  <ListItemIcon>
-                    <PersonAdd fontSize="small" />
-                  </ListItemIcon>
-                  My account
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <ListItemIcon>
-                    <IoShieldHalf />
-                  </ListItemIcon>
-                  Reset Password
-                </MenuItem>
-                <MenuItem onClick={handleClose}>
-                  <ListItemIcon>
-                    <Logout fontSize="small" />
-                  </ListItemIcon>
-                  Logout
-                </MenuItem>
-              </Menu>
+              ) : (
+                <Link to="/login"> 
+                <Button className="btn-blue1 btn-lg btn-round">SIGN IN</Button> 
+                </Link>
+              )}
             </div>
           </div>
         </div>

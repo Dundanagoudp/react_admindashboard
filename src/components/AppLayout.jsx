@@ -1,41 +1,49 @@
-import { Outlet, useNavigation } from "react-router";
+import { Outlet, useNavigation } from "react-router-dom";
 import { Header } from "./Header";
-import { Dashboard } from "./Dashboard";
 import { SideBar } from "./SideBar";
-import { createContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 
 // Creating context
-export const myContext = createContext();
+export const myContext = createContext(); 
 
 const AppLayout = () => {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
+  const [isLogin, setIsLogin] = useState(false); 
+  const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
 
   const navigation = useNavigation();
 
-  // If the app is in a loading state, show the loading component
   if (navigation.state === "loading") return <Loading />;
 
   const values = {
     isToggleSidebar,
     setIsToggleSidebar,
+    isLogin,
+    setIsLogin,
+    isHideSidebarAndHeader,
+    setIsHideSidebarAndHeader,
   };
 
   return (
-    <>
-      <myContext.Provider value={values}>
-        <Header />
+    <myContext.Provider value={values}> 
+      <>
+        {/* Render Header only if not hiding */}
+        {!isHideSidebarAndHeader && <Header />}
+        
         <div className="main d-flex">
-          <div className={`sidebarWrapper ${isToggleSidebar ? "toggle" : ""}`}>
-            <SideBar />
-          </div>
-          <div className={`content ${isToggleSidebar ? "toggle" : ""}`}>
-            <Dashboard />
-            {/* Uncomment the Outlet component if you need nested routes */}
-            {/* <Outlet /> */}
+          {/* Render Sidebar only if not hiding */}
+          {!isHideSidebarAndHeader && (
+            <div className={`sidebarWrapper ${isToggleSidebar ? "toggle" : ""}`}>
+              <SideBar />
+            </div>
+          )}
+          
+          <div className={`content ${isHideSidebarAndHeader ? 'full' : ''} ${isToggleSidebar ? "toggle" : ""}`}>
+            <Outlet /> 
           </div>
         </div>
-      </myContext.Provider>
-    </>
+      </>
+    </myContext.Provider>
   );
 };
 

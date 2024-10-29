@@ -175,7 +175,7 @@ padding-bottom: 20px;
 .dashboard-scroll-container {
   max-height: 100vh; 
   overflow-y: auto;
-  padding: 16px;
+  padding: 10px;
 }
 
 .dashboard-scroll-container::-webkit-scrollbar {
@@ -288,6 +288,7 @@ padding-bottom: 20px;
 
 h1, h2, h3, h4, h5, h6 {
   color: #403e57;
+  font-weight: bold !important;
 }
 
 .table-responsive::-webkit-scrollbar-thumb{

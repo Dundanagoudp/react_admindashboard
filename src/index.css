@@ -14,11 +14,9 @@ header {
     width: 100%;
     height: 70px;
     background: white;
-    /* background-color: rgba(255, 255, 255, 0.4); */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);  
 }
-
 
 header .logo {
     text-decoration: none;
@@ -41,11 +39,10 @@ header button.rounded-circle {
     background: #f0f5ff !important;
     color: #292929;
     font-size: 18px !important;
-    transition: all 02s ease-in-out;
-    
+    transition: all 0.2s ease-in-out;
 }
 
-header button.rounded-circle:hover svg{
+header button.rounded-circle:hover svg {
     color: #0858f7 !important;
 }
 
@@ -75,13 +72,13 @@ header button.rounded-circle:hover svg{
     color: #292929;
 }
 
-.myAcc{
+.myAcc {
     text-align: left;
     color: black !important;
     text-transform: capitalize;
 }
 
-  .myAcc .userImg{
+.myAcc .userImg {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -91,117 +88,110 @@ header button.rounded-circle:hover svg{
     border: 1px solid #0858f7;
     padding: 2px;
     border-radius: 100%;
-
 }
 
-.myAcc .userImg .rounded-circle{
+.myAcc .userImg .rounded-circle {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    width: 100%px;
-    height: 100%px;
+    width: 100%;
+    height: 100%;
     cursor: pointer;
     position: relative;
 }
-.myAcc .userImg .rounded-circle img{
+
+.myAcc .userImg .rounded-circle img {
     object-fit: cover;
     width: 100%;
     height: 100%;
 }
-.myAcc .userInfo{
+
+.myAcc .userInfo {
     padding-left: 10px;
 }
 
-.myAcc .userInfo h4{
+.myAcc .userInfo h4 {
     font-size: 15px;
     font-weight: 600;
     margin-bottom: 0px;
 } 
 
-.myAcc .userInfo p{
+.myAcc .userInfo p {
     margin-top: 0px;
     font-size: 12px;
     color: black;
     opacity: 0.7;
 }
 
-#account-menu li{
+#account-menu li {
     font-size: 15px !important;
     padding: 12px 15px !important;
 }
-#account-menu li svg{
+
+#account-menu li svg {
     font-size: 20px !important;
 }
 
-/* Styling for Notifications heading */
 #notifications-menu .head h4 {
     font-size: 18px;
     font-weight: bold;
-    color: #333;     padding-bottom: 5px;
+    color: #333;
+    padding-bottom: 5px;
     margin-bottom: 10px;
-    border-bottom: 1px solid #ccc;   }
-  /* Notifications Menu */
-#notifications.MuiPaper-elevation {
-    right: 250px !important; /* Position from the right */
-    width: 300px !important; /* Set dropdown width */
-    left: auto !important; /* Ensure the left value is set to auto */
-  }
+    border-bottom: 1px solid #ccc;
+}
 
-  /* Dropdown List Header Styling */
+#notifications.MuiPaper-elevation {
+    right: 250px !important;
+    width: 300px !important;
+    left: auto !important;
+}
+
 .dropdown_list .head h4 {
     font-size: 17px;
     font-weight: 600;
-  }
-  
-  /* List Items in Dropdown */
-  .dropdown_list li.MuiButtonBase-root {
+}
+
+.dropdown_list li.MuiButtonBase-root {
     background: #ebf6ff !important;
     color: #000 !important;
     padding: 10px 15px !important;
-  }
-  
-  
-  /* Dropdown List Title Styling */
-  /* Dropdown List Title Styling */
+}
+
 .dropdown_list h4 {
     font-size: 20px;
     font-weight: 600;
-  }
-  
-  /* Notification Info Container */
-  .dropdownInfo {
+}
+
+.dropdownInfo {
     padding-left: 15px;
-  }
-  
-  /* Notification Info Text Styling */
-  .dropdownInfo h4 {
+}
+
+.dropdownInfo h4 {
     font-size: 13px;
     font-weight: 500;
     white-space: break-spaces;
     line-height: 21px;
     margin-top: 0px;
-  }
-  
-  /* Bold Text inside Notification */
-  .dropdownInfo h4 b {
+}
+
+.dropdownInfo h4 b {
     font-weight: 600;
     margin-right: 5px;
-  }
-  
-  /* Paragraph Text in Notification */
-  .dropdownInfo p {
+}
+
+.dropdownInfo p {
     font-size: 12px;
     font-weight: 500;
     margin-top: 0px;
-  }
-  
-  /* Sky Blue Text Class */
-  .text-sky {
-    color: #0858f7 !important; /* Ensure important is correctly used here */
-  }
-  
-  .btn-blue {
+}
+
+.text-sky {
+    color: #0858f7 !important;
+}
+
+.btn-blue {
     background-color: #1C2B78;
     color: white;
     border: none;
@@ -218,4 +208,30 @@ header button.rounded-circle:hover svg{
     background-color: #163b69;
 }
 
+.btn-blue1 {
+    background: #0858f7 !important;
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: #fff !important;
+    text-transform: capitalize !important;
+    border-radius: 30px !important;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
 
+.btn-blue1:hover {
+    background: #064bb3 !important;
+    color: #fff !important;
+}
+
+.btn-blue1 .btn-lg {
+    padding: 7px 35px !important;
+}
+
+  .full {
+    max-width: 100% !important;
+    flex: 0 0 100% !important; /* Take full width */
+    width: 100% !important; /* Ensure full width */
+  }
+  
+  

@@ -1,0 +1,34 @@
+.loginSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  width: 100%;
+  background-color: #f0f0f0;
+  margin: 0;
+}
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px; /* Adjust the top margin as needed */
+  padding: 10px; /* Add padding if needed */
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+h5 {
+  margin-top: 10px;
+  font-size: 18px;
+  text-align: center;
+}

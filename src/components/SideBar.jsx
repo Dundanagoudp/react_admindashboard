@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import { Button } from "@mui/material";
 import { MdDashboard, MdMessage } from "react-icons/md"; 
 import { FaAngleRight, FaProductHunt } from "react-icons/fa"; 
@@ -9,10 +9,13 @@ import { Link } from "react-router-dom";
 import { MdOutlineLogout } from "react-icons/md";
 
 import '../css/SideBar.css';  
+import { myContext } from "./AppLayout";
 
 export const SideBar = () => {
   const [isProductsOpen, setIsProductsOpen] = useState(false); 
   const [isUsersOpen, setIsUsersOpen] = useState(false); 
+
+  const context= useContext(myContext)
 
   const toggleProductsMenu = () => {
     setIsProductsOpen(!isProductsOpen); 

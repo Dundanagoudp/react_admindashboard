@@ -280,3 +280,43 @@
   text-decoration: none;
   color: #333;
 }
+
+/* toogle button */
+
+.main {
+  display: flex;
+}
+
+.main .content {
+  width: 80%;
+  flex: 0 0 80%;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .content.toggle {
+  width: 100%;
+  flex: 0 0 100%;
+}
+
+.main .sidebarWrapper {
+  width: 20%;
+  flex: 0 0 20%;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+}
+
+.main .sidebarWrapper.toggle {
+  width: 0;
+  flex: 0 0 0;
+}
+
+.main .sidebarWrapper .sidebar {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  left: 0;
+}
+
+.main .sidebarWrapper.toggle .sidebar {
+  position: absolute;
+  left: -100%;
+}

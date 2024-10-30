@@ -123,6 +123,57 @@ export const Header = () => {
                     </div>
                   </div>
                 </MenuItem>
+                <MenuItem onClick={handleNotificationsClose}>
+                  <div className="myAcc d-flex align-items-center">
+                    <div className="userImg">
+                      <span className="rounded-circle">
+                        <img src="/admin.png" alt="img" />
+                      </span>
+                    </div>
+                    <div className="dropdownInfo">
+                      <h4>
+                        <span>
+                          <b>Chetan</b> added best values <b>Good dealing</b>
+                        </span>
+                      </h4>
+                      <p className="text-sky">Few minutes ago</p>
+                    </div>
+                  </div>
+                </MenuItem>
+                <MenuItem onClick={handleNotificationsClose}>
+                  <div className="myAcc d-flex align-items-center">
+                    <div className="userImg">
+                      <span className="rounded-circle">
+                        <img src="/admin.png" alt="img" />
+                      </span>
+                    </div>
+                    <div className="dropdownInfo">
+                      <h4>
+                        <span>
+                          <b>Chetan</b> added best values <b>Good dealing</b>
+                        </span>
+                      </h4>
+                      <p className="text-sky">Few minutes ago</p>
+                    </div>
+                  </div>
+                </MenuItem>
+                <MenuItem onClick={handleNotificationsClose}>
+                  <div className="myAcc d-flex align-items-center">
+                    <div className="userImg">
+                      <span className="rounded-circle">
+                        <img src="/admin.png" alt="img" />
+                      </span>
+                    </div>
+                    <div className="dropdownInfo">
+                      <h4>
+                        <span>
+                          <b>Chetan</b> added best values <b>Good dealing</b>
+                        </span>
+                      </h4>
+                      <p className="text-sky">Few minutes ago</p>
+                    </div>
+                  </div>
+                </MenuItem>
                 {/* Additional notifications can be added here */}
                 <button className="btn-blue w-100">View all notifications</button>
               </Menu>

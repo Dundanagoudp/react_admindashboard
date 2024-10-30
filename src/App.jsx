@@ -5,6 +5,7 @@ import AppLayout from "./components/AppLayout";
 import { SideBar } from "./components/SideBar";
 import { Users } from "./components/Users";
 import { Login } from "./pages/Login";
+import SignUp from "./pages/SignUp";
 
 
 export const App=()=>{
@@ -33,6 +34,10 @@ export const App=()=>{
 {
   path:"/login",
   element:<Login/>
+},
+{
+  path:"/signup",
+  element:<SignUp/>
 }
   ]
 }      

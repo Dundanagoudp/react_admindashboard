@@ -8,7 +8,7 @@ export const myContext = createContext();
 
 const AppLayout = () => {
   const [isToggleSidebar, setIsToggleSidebar] = useState(false);
-  const [isLogin, setIsLogin] = useState(false); 
+  const [isLogin, setIsLogin] = useState(true); 
   const [isHideSidebarAndHeader, setIsHideSidebarAndHeader] = useState(false);
   const [themeMode, setThemeMode] = useState(true);
 

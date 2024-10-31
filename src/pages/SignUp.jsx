@@ -1,6 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { myContext } from '../components/AppLayout';
-import { FaTwitterSquare, FaFacebook } from "react-icons/fa";
+import { FaTwitterSquare, FaFacebook, FaEnvelope, FaLock } from "react-icons/fa";
+import { MdOutlineSecurity, MdVisibility, MdVisibilityOff } from "react-icons/md";
+import { Link } from 'react-router-dom';
+
 import '../css/SignUp.css';
 
 const SignUp = () => {
@@ -34,16 +37,16 @@ const SignUp = () => {
     <section className="signupSection">
       <div className="signupContainer">
         <div className="infoBox">
-          <h1>BEST UX/UI FASHION ECOMMERCE DASHBOARD & ADMIN PANEL</h1>
+          <h1>Chetan's eCommerce Dashboard & ADMIN PANEL</h1>
           <p>
-            Elit iusto dolore libero recusandae dolor dolores explicabo ullam cum facilis
-            aperiam alias odio quam excepturi molestiae omnis inventore. Repudiandae
-            officia placeat amet consectetur dicta dolorem quo.
+          Welcome to your all-in-one dashboard, designed to provide a streamlined overview 
+          of your eCommerce operations. Here, you can track real-time sales performance, manage your inventory,
+           monitor customer engagement, and analyze key metrics to drive business growth..
           </p>
-          <button className="homeButton">GO TO HOME</button>
+          <Link to="/"><button className="homeButton">GO TO HOME</button> </Link>
         </div>
         <div className="formBox">
-          <div className="logo">
+          <div className="logo3">
             <img src="/logo1.png" alt="Logo" width="60px" />
             <h5>Register a new account</h5>
           </div>

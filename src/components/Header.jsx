@@ -12,31 +12,23 @@ import Logout from '@mui/icons-material/Logout';
 import { IoShieldHalf } from "react-icons/io5";
 
 export const Header = () => {
-  const [isOpen, setIsOpen] = useState(true);
   const [anchorEl, setAnchorEl] = useState(null);
   const [anchorElNotifications, setAnchorElNotifications] = useState(null);
-  const [isLogin, setIsLogin] = useState(false);
 
-  const context = useContext(myContext);
-
+  const context = useContext(myContext); // Use context for managing states
   const open = Boolean(anchorEl);
   const openNotifications = Boolean(anchorElNotifications);
 
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
+  // Toggle theme mode
+  const toggleTheme = () => {
+    context.setThemeMode((prevMode) => !prevMode); // Toggle between light and dark mode
   };
 
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
+  const handleClick = (event) => setAnchorEl(event.currentTarget);
+  const handleClose = () => setAnchorEl(null);
 
-  const handleNotificationsClick = (event) => {
-    setAnchorElNotifications(event.currentTarget);
-  };
-
-  const handleNotificationsClose = () => {
-    setAnchorElNotifications(null);
-  };
+  const handleNotificationsClick = (event) => setAnchorElNotifications(event.currentTarget);
+  const handleNotificationsClose = () => setAnchorElNotifications(null);
 
   return (
     <>
@@ -56,8 +48,8 @@ export const Header = () => {
               <SearchBox />
             </div>
             <div className="col-7 d-flex align-items-center justify-content-end part3">
-              <Button className="rounded-circle" style={{ marginRight: '15px' }}>
-                <MdOutlineLightMode />
+              <Button className="rounded-circle" style={{ marginRight: '15px' }} onClick={toggleTheme}>
+                {context.themeMode ? <MdOutlineLightMode /> : <MdDarkMode />}
               </Button>
               <Button className="rounded-circle" style={{ marginRight: '15px' }} onClick={handleClick}>
                 <IoMdCart />
@@ -102,9 +94,6 @@ export const Header = () => {
                 transformOrigin={{ horizontal: 'right', vertical: 'top' }}
                 anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
               >
-                <div className="head pl-3 pb-2">
-                  <h4>Orders (12)</h4>
-                </div>
                 {/* Example notification items */}
                 <MenuItem onClick={handleNotificationsClose}>
                   <div className="myAcc d-flex align-items-center">
@@ -174,7 +163,6 @@ export const Header = () => {
                     </div>
                   </div>
                 </MenuItem>
-                {/* Additional notifications can be added here */}
                 <button className="btn-blue w-100">View all notifications</button>
               </Menu>
 
@@ -241,7 +229,7 @@ export const Header = () => {
                 </div>
               ) : (
                 <Link to="/login"> 
-                <Button className="btn-blue1 btn-lg btn-round">SIGN IN</Button> 
+                  <Button className="btn-blue1 btn-lg btn-round">SIGN IN</Button> 
                 </Link>
               )}
             </div>

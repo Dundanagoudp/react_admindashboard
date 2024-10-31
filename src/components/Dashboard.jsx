@@ -1,5 +1,5 @@
 import '../css/Dashbord.css';
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { DashboardBox } from '../DashboardBox/Boxes';
 import { FaUserCircle, FaCartArrowDown, FaShoppingBag } from "react-icons/fa";
 import { TbStars } from "react-icons/tb";
@@ -17,6 +17,7 @@ import { FaEye } from "react-icons/fa";
 import { IoPencilSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import Pagination from '@mui/material/Pagination';
+import { myContext } from '../components/AppLayout';
 
 
 export const chartData = [
@@ -39,6 +40,7 @@ const menuOptions = ['Last 24 Hours', 'Last 7 Days', 'Last 30 Days', 'All Time']
 const ITEM_HEIGHT = 48;
 
 export const Dashboard = () => {
+  const context = useContext(myContext);
   const [anchorEl, setAnchorEl] = useState(null);
   const [showBy, setShowBy] = useState('');
   const [categoryBy, setCategoryBy] = useState('');
@@ -64,6 +66,13 @@ export const Dashboard = () => {
   const handleChange3 = (event) => {
     setBrandBy(event.target.value); 
   };
+
+  useEffect(() => {
+    context.setIsHideSidebarAndHeader(false);
+    
+    window.scrollTo(0,0);
+  }, []);
+
 
   return (
     <div className="dashboard-scroll-container">

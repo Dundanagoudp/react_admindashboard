@@ -230,8 +230,18 @@ header button.rounded-circle:hover svg {
 
   .full {
     max-width: 100% !important;
-    flex: 0 0 100% !important; /* Take full width */
-    width: 100% !important; /* Ensure full width */
+    flex: 0 0 100% !important; 
+    width: 100% !important; 
   }
   
+  /* baody dark  */
+
+  body.dark header{
+    background: #1d2b72f0 !important;
+  }
+
+  body.dark header button.rounded-circle{
+    background: #1d2b72f0 !important;
+  }
+
   

@@ -389,10 +389,18 @@ body.dark .menu-text {
 }
 
 body.dark .sidebar-menu::-webkit-scrollbar-thumb {
-  background-color: #9a1313 !important;
+  background-color: #ffffff !important;
   border-radius: 10px;
 }
 
 body.dark .submenu-item a {
   color: white !important;
 }
+
+body.dark .submenu-item:hover{
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark {
+  background: #071739 !important;
+} 

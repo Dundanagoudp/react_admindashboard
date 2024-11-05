@@ -434,3 +434,157 @@ h1, h2, h3, h4, h5, h6 {
   font-family: Arial, sans-serif;
 }
 
+/* dark mode */
+
+body.dark .card{
+  background: #16336A !important;
+  color: white !important;
+}
+
+body.dark .right-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  gap: 20px;
+}
+
+body.dark .dashboardBoxWrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  width: 70%;
+}
+
+body.dark .dashboardBox {
+  background-color: #1d2b72f0;
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  font-size: 1.2rem;
+  font-weight: 500;
+  position: relative;
+  height: 200px;
+}
+
+body.dark .boxgraph {
+  background-color: #1d2b72f0;
+  color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+  height: 420px;
+  width: 410px !important;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+body.dark .dashboardBoxWrapper .dashboardBox .icon svg,
+body.dark .dashboardBoxWrapper .dashboardBox .toggleIcon svg {
+  color: white;
+}
+
+body.dark .dashboardBoxWrapper .dashboardBox .toggleIcon {
+  color: white;
+}
+
+body.dark .text-white1 {
+  color: white;
+}
+
+body.dark .cardFilters .col h4 {
+  color: white;
+}
+
+body.dark .table th,
+body.dark .table td {
+  background-color: #1d2b72f0;
+  color: white;
+  border-color: white;
+  text-align: center;
+}
+
+body.dark .table tbody td {
+  color: white;
+}
+
+body.dark .tableFooter {
+  background-color: #1d2b72f0;
+  color: white;
+  border-top: 1px solid white;
+}
+
+body.dark .tableFooter p,
+body.dark .tableFooter p b {
+  color: white;
+}
+
+body.dark .product-info .product-name,
+body.dark .product-info .product-description {
+  color: white;
+}
+
+body.dark .table tbody .actions Button {
+  background-color: #1d2b72f0;
+  color: white;
+  border: 1px solid white;
+}
+
+body.dark .table tbody .actions Button:hover {
+  background-color: #3a4b92;
+}
+
+body.dark .table-responsive::-webkit-scrollbar-thumb {
+  background-color: #9a1313;
+}
+
+/* Ensure scrollbars are visible only on hover */
+.dashboard-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+
+.dashboard-scroll-container:hover::-webkit-scrollbar {
+  display: block;
+}
+
+body.dark .table-footer {
+  padding-bottom: 20px;
+}
+
+body.dark h3{
+  color: white !important;
+}
+
+body.dark .cardFilters .col-md-3 h4{
+  color: white !important;
+}
+
+body.dark .css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root{
+  color: white !important;
+}
+
+body.dark .css-1bug3cd-MuiButtonBase-root-MuiPaginationItem-root.Mui-selected{
+  color: white !important;
+}
+
+body.dark .table-responsive::-webkit-scrollbar-thumb{
+  background: #ccc;
+}
+
+body.dark .dashboard-scroll-container::-webkit-scrollbar-thumb {
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+body.dark .css-1to7aaw-MuiButtonBase-root-MuiPaginationItem-root:hover {
+  color: #ffffff !important;
+}
+body.dark .new-price{
+  color: white !important;
+}

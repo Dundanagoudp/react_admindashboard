@@ -33,7 +33,7 @@ export const SideBar = () => {
         <h2 className="sidebar-title">Admin Dashboard</h2>
       </div>
       <ul className="sidebar-menu">
-        <li className="menu-item">
+        <li className="menu-item" to="/">
           <Button className="w-100 sidebar-button">
             <span className="icon"><MdDashboard /></span> 
             <span className="menu-text">Dashboard</span>
@@ -51,8 +51,8 @@ export const SideBar = () => {
           {isProductsOpen && (
             <ul className="submenu"> 
               <li className="submenu-item"><Link to="#">Products List</Link></li>
-              <li className="submenu-item"><Link to="#">Product View</Link></li>
-              <li className="submenu-item"><Link to="#">Product Upload</Link></li>
+              <li className="submenu-item"><Link to="/ProductDetails">Product View</Link></li>
+              <li className="submenu-item"><Link to="/productupload">Product Upload</Link></li>
             </ul>
           )}
         </li>

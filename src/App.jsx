@@ -6,6 +6,8 @@ import { SideBar } from "./components/SideBar";
 import { Users } from "./components/Users";
 import { Login } from "./pages/Login";
 import SignUp from "./pages/SignUp";
+import { ProductDetails } from "./pages/ProductDetails";
+import { ProductUpload } from "./pages/ProductUpload";
 
 
 export const App=()=>{
@@ -38,6 +40,14 @@ export const App=()=>{
 {
   path:"/signup",
   element:<SignUp/>
+},
+{
+  path:"/productdetails",
+  element:<ProductDetails/>
+},
+{
+  path:"/productupload",
+  element:<ProductUpload/>
 }
   ]
 }      

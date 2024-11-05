@@ -18,6 +18,7 @@ import { IoPencilSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import Pagination from '@mui/material/Pagination';
 import { myContext } from '../components/AppLayout';
+import { Link } from 'react-router-dom';
 
 
 export const chartData = [
@@ -285,7 +286,7 @@ export const Dashboard = () => {
     <td>38k</td>
     <td>
     <div className="actions d-flex align-items-center">
-    <Button color="secondary"><FaEye /></Button>
+   <Link to="/productdetails"><Button color="secondary"><FaEye /></Button> </Link>
         <Button color="success"><IoPencilSharp /></Button>
         <Button color="danger"><MdDelete /></Button>
       </div>

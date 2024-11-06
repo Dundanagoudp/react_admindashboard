@@ -1,30 +1,23 @@
-/* scrolling  */
-
-/* Scrollable container for Product Details */
 .product-details-container {
   max-height: 100vh;
   overflow-y: auto;
   padding: 10px;
 }
 
-/* Hide scrollbar by default */
 .product-details-container::-webkit-scrollbar {
   display: none;
 }
 
-/* Show scrollbar on hover */
 .product-details-container:hover::-webkit-scrollbar {
   display: block;
   width: 8px;
 }
 
-/* Scrollbar thumb styling */
 .product-details-container::-webkit-scrollbar-thumb {
   background-color: #1C2B78;
   border-radius: 4px;
 }
 
-/* Scrollbar track styling */
 .product-details-container::-webkit-scrollbar-track {
   background-color: transparent;
 }
@@ -38,7 +31,7 @@
 .product-card {
   display: flex;
   align-items: center;
-  justify-content: space-between; /* Space between heading and breadcrumbs */
+  justify-content: space-between;
   background-color: #fff;
   padding: 1.5rem;
   border-radius: 8px;
@@ -64,9 +57,9 @@
 }
 
 .product-breadcrumbs .MuiChip-root {
-  background-color: rgba(8, 88, 247, 0.1); /* Subtle background color */
-  color: #0858f7; /* Primary color for text */
-  margin-left: 8px; /* Space between breadcrumb items */
+  background-color: rgba(8, 88, 247, 0.1);
+  color: #0858f7;
+  margin-left: 8px;
   padding: 0.5rem 1rem;
   border-radius: 12px;
   font-weight: 500;
@@ -75,38 +68,32 @@
 }
 
 .product-breadcrumbs .MuiChip-root:hover {
-  background-color: rgba(8, 88, 247, 0.2); /* Slightly darker on hover */
-  transform: translateY(-2px); /* Lifts on hover */
+  background-color: rgba(8, 88, 247, 0.2);
+  transform: translateY(-2px);
 }
 
 .product-breadcrumbs .MuiChip-root:active {
   background-color: rgba(8, 88, 247, 0.3);
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2); /* Shadow on active */
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .product-breadcrumbs .MuiSvgIcon-root {
-  color: #0858f7; /* Icon color */
+  color: #0858f7;
   font-size: 1rem;
 }
 
-/* Dark mode styles for ProductDetails */
 body.dark .product-card .product-title {
   color: white !important;
 }
 
-body.dark .product-card{
+body.dark .product-card {
   background: #16336A !important;
 }
 
-body.dark body.dark .product-breadcrumbs .MuiChip-root{
-  color:  white !important;
-}
-
-body.dark .product-breadcrumbs .MuiChip-root{
+body.dark .product-breadcrumbs .MuiChip-root {
   color: white !important;
 }
 
-/* Main Content Section */
 .card {
   background-color: #ffffff;
   border-radius: 8px;
@@ -114,7 +101,6 @@ body.dark .product-breadcrumbs .MuiChip-root{
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* Product Gallery */
 .product-gallery {
   display: flex;
   flex-direction: column;
@@ -131,7 +117,6 @@ body.dark .product-breadcrumbs .MuiChip-root{
   margin-bottom: 1rem;
 }
 
-/* Scrollable Thumbnail Gallery */
 .thumbnail-gallery {
   display: flex;
   gap: 10px;
@@ -163,57 +148,76 @@ body.dark .product-breadcrumbs .MuiChip-root{
   border-radius: 4px;
 }
 
-/* Product Info Section */
-/* Product Info Section */
-/* .product-info {
+.product-info-section {
   display: flex;
   flex-direction: column;
   padding: 1rem;
-  width: 100%; /* Make sure the section is full width */
+  width: 100%;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-/* Product Title */
-.product-info h2 {
-  font-size: 1.8rem;
+.product-info-section__title {
+  font-size: 2rem;
   color: #1C2B78;
-  margin-bottom: 1rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
   text-align: center;
+  letter-spacing: 0.5px;
 }
 
-/* Product Attributes */
-.product-attributes {
+.product-info-section__attributes {
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #555;
+  color: #4a4a4a;
   font-size: 1rem;
 }
 
-.product-attributes li {
+.product-info-section__attribute-item {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 0.8rem 0; /* Vertical padding for spacing */
+  gap: 12px;
+  padding: 1rem 0;
   font-size: 1rem;
   color: #333;
+  border-bottom: 1px solid #e5e7eb;
 }
 
-.product-attributes li strong {
+.product-info-section__attribute-item:last-child {
+  border-bottom: none;
+}
+
+.product-info-section__attribute-item strong {
   margin-right: 5px;
   color: #1C2B78;
-  font-weight: bold;
+  font-weight: 600;
 }
 
-/* Icons Style */
-.product-attributes li svg {
-  color: #1C2B78; /* Icon color */
-  font-size: 1.2rem; /* Adjust icon size */
+.product-info-section__icon {
+  color: #1C2B78;
+  font-size: 1.4rem;
 }
 
-/* Responsive adjustments */
 @media (max-width: 768px) {
-  .product-info h2 {
-    font-size: 1.5rem; /* Adjust title size for smaller screens */
+  .product-info-section__title {
+    font-size: 1.7rem;
+  }
+  .product-info-section__attribute-item {
+    font-size: 0.9rem;
+    gap: 8px;
+    padding: 0.7rem 0;
   }
 }
- */
+
+
+body.dark .product-info-section__title {
+  color: white !important;
+}
+
+body.dark .product-info-section__attribute-item {
+  color: white !important;
+}
+
+

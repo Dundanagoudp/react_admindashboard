@@ -66,21 +66,38 @@ export const ProductDetails = () => {
           </div>
 
           <div className="col-md-6">
-            {/* Product Info */}
-            <div className="product-info">
-              <h2>Formal suits for men wedding slim fit 3 piece dress business party jacket</h2>
-              <ul className="product-attributes">
-                <li><FaTags /> <strong>Brand:</strong> Ecstasy</li>
-                <li><FaTags /> <strong>Category:</strong> Men's</li>
-                <li><FaTags /> <strong>Tags:</strong> Suit, Party, Dress, Smart</li>
-                <li><FaPalette /> <strong>Color:</strong> Red, Blue, White</li>
-                <li><FaRuler /> <strong>Size:</strong> 68 Piece</li>
-                <li><FaDollarSign /> <strong>Price:</strong> $199</li>
-                <li><FaBoxOpen /> <strong>Stock:</strong> Available</li>
-                <li><FaCalendarAlt /> <strong>Added on:</strong> 02 Feb 2020</li>
-              </ul>
-            </div>
-          </div>
+  {/* Product Info */}
+  <div className="product-info-section">
+    <h2 className="product-info-section__title">Formal suits for men wedding slim fit 3 piece dress business party jacket</h2>
+    <ul className="product-info-section__attributes">
+      <li className="product-info-section__attribute-item">
+        <FaTags className="product-info-section__icon" /> <strong>Brand:</strong> Ecstasy
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaTags className="product-info-section__icon" /> <strong>Category:</strong> Men's
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaTags className="product-info-section__icon" /> <strong>Tags:</strong> Suit, Party, Dress, Smart
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaPalette className="product-info-section__icon" /> <strong>Color:</strong> Red, Blue, White
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaRuler className="product-info-section__icon" /> <strong>Size:</strong> 68 Piece
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaDollarSign className="product-info-section__icon" /> <strong>Price:</strong> $199
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaBoxOpen className="product-info-section__icon" /> <strong>Stock:</strong> Available
+      </li>
+      <li className="product-info-section__attribute-item">
+        <FaCalendarAlt className="product-info-section__icon" /> <strong>Added on:</strong> 02 Feb 2020
+      </li>
+    </ul>
+  </div>
+</div>
+
         </div>
       </div>
     </div>

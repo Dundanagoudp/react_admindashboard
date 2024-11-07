@@ -15,6 +15,8 @@ const SignUp = () => {
     confirmPassword: '',
     termsAccepted: false
   });
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -29,6 +31,14 @@ const SignUp = () => {
     // Handle sign-up logic here
   };
 
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
+  const toggleConfirmPasswordVisibility = () => {
+    setShowConfirmPassword(!showConfirmPassword);
+  };
+
   useEffect(() => {
     context.setIsHideSidebarAndHeader(true);
   }, [context]);
@@ -39,11 +49,11 @@ const SignUp = () => {
         <div className="infoBox">
           <h1>Chetan's eCommerce Dashboard & ADMIN PANEL</h1>
           <p>
-          Welcome to your all-in-one dashboard, designed to provide a streamlined overview 
-          of your eCommerce operations. Here, you can track real-time sales performance, manage your inventory,
-           monitor customer engagement, and analyze key metrics to drive business growth..
+            Welcome to your all-in-one dashboard, designed to provide a streamlined overview 
+            of your eCommerce operations. Here, you can track real-time sales performance, manage your inventory,
+            monitor customer engagement, and analyze key metrics to drive business growth..
           </p>
-          <Link to="/"><button className="homeButton">GO TO HOME</button> </Link>
+          <Link to="/"><button className="homeButton">GO TO HOME</button></Link>
         </div>
         <div className="formBox">
           <div className="logo3">
@@ -51,47 +61,55 @@ const SignUp = () => {
             <h5>Register a new account</h5>
           </div>
           <form onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Enter your name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="email"
-              placeholder="Enter your email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Enter your password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              required
-            />
-            <input
-              type="password"
-              placeholder="Confirm your password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              required
-            />
-            <div className="termsContainer">
+            <div className="inputWithIcon">
+              <FaEnvelope className="inputIcon" />
               <input
-                type="checkbox"
-                name="termsAccepted"
-                checked={formData.termsAccepted}
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+                value={formData.name}
                 onChange={handleChange}
                 required
               />
-              <label>I agree to all Terms & Conditions</label>
+            </div>
+            <div className="inputWithIcon">
+              <FaEnvelope className="inputIcon" />
+              <input
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                required
+              />
+            </div>
+            <div className="inputWithIcon">
+              <FaLock className="inputIcon" />
+              <input
+                type={showPassword ? "text" : "password"}
+                placeholder="Enter your password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                required
+              />
+              <div onClick={togglePasswordVisibility} className="passwordToggleIcon">
+                {showPassword ? <MdVisibilityOff /> : <MdVisibility />}
+              </div>
+            </div>
+            <div className="inputWithIcon">
+              <FaLock className="inputIcon" />
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                placeholder="Confirm your password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                required
+              />
+              <div onClick={toggleConfirmPasswordVisibility} className="passwordToggleIcon">
+                {showConfirmPassword ? <MdVisibilityOff /> : <MdVisibility />}
+              </div>
             </div>
             <button type="submit" className="signupButton">SIGN UP</button>
           </form>

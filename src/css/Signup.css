@@ -167,3 +167,71 @@ form input:focus {
 .socialButton.facebook:hover {
     background-color: #2d4373;
 }
+
+/* Container for input fields with icons */
+.inputWithIcon {
+    position: relative;
+    margin-bottom: 15px;
+  }
+  
+  .inputWithIcon input {
+    width: 100%;
+    padding: 10px 40px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  .inputWithIcon .inputIcon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #888;
+  }
+  
+  .passwordToggleIcon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* Styling for social buttons */
+  .socialButton {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 4px;
+  }
+  
+  .socialButton.twitter {
+    background-color: #1DA1F2;
+  }
+  
+  .socialButton.facebook {
+    background-color: #3b5998;
+  }
+  
+  .signupButton {
+    background-color: #507ad3;
+    color: white;
+    padding: 12px;
+    border: none;
+    width: 100%;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .or {
+    text-align: center;
+    margin: 15px 0;
+    font-size: 16px;
+  }
+  

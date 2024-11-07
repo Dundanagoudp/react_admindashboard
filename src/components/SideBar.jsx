@@ -7,6 +7,10 @@ import { IoIosNotifications } from "react-icons/io";
 import { IoSettingsSharp } from "react-icons/io5"; 
 import { Link } from "react-router-dom"; 
 import { MdOutlineLogout } from "react-icons/md";
+import { RiLoginCircleFill } from "react-icons/ri";
+import { RxAvatar } from "react-icons/rx";
+
+
 
 import '../css/SideBar.css';  
 import { myContext } from "./AppLayout";
@@ -39,6 +43,7 @@ export const SideBar = () => {
             <span className="menu-text">Dashboard</span>
             <span className="arrow"><FaAngleRight /></span> 
           </Button>
+          
         </li>
         
         {/* Products Menu */}
@@ -81,18 +86,22 @@ export const SideBar = () => {
           </Button>
         </li>
         <li className="menu-item">
+          <Link to="/login">
           <Button className="w-100 sidebar-button">
-            <span className="icon"><MdMessage /></span> 
-            <span className="menu-text">Messages</span>
-            <span className="arrow"><FaAngleRight /></span> 
+            <span className="icon"><RiLoginCircleFill /></span> 
+            <span className="menu-text">Login</span>
+            <span className="arrow"></span> 
           </Button>
+          </Link>
         </li>
-        <li className="menu-item">
+        <li className="menu-item" >
+        <Link to="/signup">
           <Button className="w-100 sidebar-button">
-            <span className="icon"><IoIosNotifications /></span> 
-            <span className="menu-text">Notifications</span>
-            <span className="arrow"><FaAngleRight /></span> 
+            <span className="icon"><RxAvatar /></span> 
+            <span className="menu-text">Sign up</span>
+            <span className="arrow"></span> 
           </Button>
+          </Link>
         </li>
         <li className="menu-item">
           <Button className="w-100 sidebar-button">

@@ -15,6 +15,8 @@ import { IoPencilSharp } from "react-icons/io5";
 import { MdDelete } from "react-icons/md";
 import Pagination from '@mui/material/Pagination';
 import { Link } from 'react-router-dom';
+import { FaUser, FaShoppingCart, FaLock } from 'react-icons/fa';
+
 
 
 const StyledBreadcrumb = styled(Chip)(({ theme }) => {
@@ -41,6 +43,11 @@ const StyledBreadcrumb = styled(Chip)(({ theme }) => {
     
 
 export const ProductList=()=>{
+  const cardData = [
+    { color: 'green', title: 'Total Users', value: 277, icon: <FaUser /> },
+    { color: 'purple', title: 'Total Orders', value: 277, icon: <FaShoppingCart /> },
+    { color: 'blue', title: 'Total Sales', value: 277, icon: <FaLock /> },
+];
   const [showBy, setShowBy] = useState('');
   const [categoryBy, setCategoryBy] = useState('');
   const [brandBy, setBrandBy] = useState('');
@@ -68,7 +75,10 @@ export const ProductList=()=>{
             <StyledBreadcrumb label="Product List" deleteIcon={<ExpandMoreIcon />} />
           </Breadcrumbs>
         </div>
+        
       </div>
+     
+      
       <div className="card shadow border-0 p-2">
           <h3 className="hd">Best Selling Products</h3>
           <div className="row cardFilters mt-3">

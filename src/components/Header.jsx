@@ -43,7 +43,7 @@ export const Header = () => {
             </div>
             <div className="col-3 d-flex align-items-center part2 pl-4">
               <Button className="rounded-circle" onClick={() => context.setIsToggleSidebar(!context.isToggleSidebar)} style={{ marginRight: "15px" }}>
-                {context.isToggleSidebar ? <MdMenuOpen /> : <MdOutlineMenu />}
+                {context.isToggleSidebar ?  <MdOutlineMenu /> : <MdMenuOpen /> }
               </Button>
               <SearchBox />
             </div>

@@ -42,8 +42,8 @@ export const ProductUpload = () => {
   };
 
   return (
-    <div className="right-content product-details-container w-100">
-      <div className="product-card-unique shadow border-0 w-100 p-4 ">
+    <div className="right-content product-details-container">
+      <div className="product-card-unique shadow border-0 p-4">
         <h5 className="product-title-unique mb-0">Product Upload</h5>
         <div className="product-breadcrumbs-container-unique">
           <Breadcrumbs aria-label="breadcrumb" className="product-breadcrumbs-unique">
@@ -54,9 +54,9 @@ export const ProductUpload = () => {
         </div>
       </div>
 
-      <form className="product-upload-form w-100">
+      <form className="product-upload-form">
         <div className="row">
-          <div className="col-md-7">
+          <div className="col-md-12">
             <div className="product-upload-card card p-4 mb-4">
               <h5 className="product-upload-title mb-4">Basic Information</h5>
 
@@ -78,7 +78,7 @@ export const ProductUpload = () => {
                     onChange={handleChangeCategory}
                     displayEmpty
                     inputProps={{ 'aria-label': 'Without label' }}
-                    className="w-100"
+                    className="select-container"
                   >
                     <MenuItem value="">
                       <em>None</em>
@@ -96,14 +96,14 @@ export const ProductUpload = () => {
                     onChange={handleChangeCategory}
                     displayEmpty
                     inputProps={{ 'aria-label': 'Without label' }}
-                    className="w-100"
+                    className="select-container"
                   >
                     <MenuItem value="">
                       <em>None</em>
                     </MenuItem>
-                    <MenuItem value={10}>Ten</MenuItem>
-                    <MenuItem value={20}>Twenty</MenuItem>
-                    <MenuItem value={30}>Thirty</MenuItem>
+                    <MenuItem>Men</MenuItem>
+                    <MenuItem>Women</MenuItem>
+                    <MenuItem>Kids</MenuItem>
                   </Select>
                 </div>
               </div>
@@ -118,6 +118,7 @@ export const ProductUpload = () => {
                   <input type="text" className="product-upload-input" />
                 </div>
               </div>
+
               <div className="row mb-3">
                 <div className="col">
                   <h6 className="product-upload-label">Ratings</h6>
@@ -134,21 +135,41 @@ export const ProductUpload = () => {
                   <input type="text" className="product-upload-input" />
                 </div>
               </div>
+            </div>
+
+            <div className="card p-4 mt-4">
+              <h5 className="mb-4">Media And Published</h5>
+              <div className="imagesUploadSec">
+                <div className="imgUploadBox d-flex align-items-center">
+                  <div className="uploadBox">
+                    <span className="remove">
+                      {/* SVG icon for remove */}
+                    </span>
+                    <div className="box">
+                      <img alt="product" className="w-100" src="https://mironcoder-hotash.netlify.app/images/product/single/01.webp" />
+                    </div>
+                  </div>
+                  <div className="uploadBox">
+                    <input type="file" multiple name="images" />
+                    <div className="info">
+                      {/* SVG icon for upload */}
+                      <p>Upload Media</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div className="text-center mt-4">
                 <Button
                   variant="contained"
-                  className="btn-publish4"
+                  color="primary"
+                  className="publish-button"
                   startIcon={<FaCloudUploadAlt />}
-                  size="large"
                 >
-                  Publish and View
+                  Publish
                 </Button>
               </div>
             </div>
-          </div>
-
-          <div className="col-md-5">
-            {/* Additional content or form elements can be added here */}
           </div>
         </div>
       </form>

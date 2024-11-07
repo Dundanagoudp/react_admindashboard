@@ -8,6 +8,7 @@ import { Login } from "./pages/Login";
 import SignUp from "./pages/SignUp";
 import { ProductDetails } from "./pages/ProductDetails";
 import { ProductUpload } from "./pages/ProductUpload";
+import { ProductList } from "./pages/ProductList";
 
 
 export const App=()=>{
@@ -48,6 +49,10 @@ export const App=()=>{
 {
   path:"/productupload",
   element:<ProductUpload/>
+},
+{
+  path:"/productlist",
+  element:<ProductList/>
 }
   ]
 }      

@@ -50,7 +50,7 @@ export const SideBar = () => {
           </Button>
           {isProductsOpen && (
             <ul className="submenu"> 
-              <li className="submenu-item"><Link to="#">Products List</Link></li>
+              <li className="submenu-item"><Link to="/productlist">Products List</Link></li>
               <li className="submenu-item"><Link to="/ProductDetails">Product View</Link></li>
               <li className="submenu-item"><Link to="/productupload">Product Upload</Link></li>
             </ul>
